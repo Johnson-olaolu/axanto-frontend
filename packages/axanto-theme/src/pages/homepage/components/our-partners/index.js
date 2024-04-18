@@ -57,7 +57,7 @@ export const partners = [
     { link: "#", image: TrackEnsure },
     { link: "#", image: VMware },
     { link: "#", image: XMCyber },
-    { link: "#", image: ZScaler }
+    // { link: "#", image: ZScaler }
 ]
 
 const sections = splitArray(partners, 5)
@@ -67,11 +67,11 @@ const OurPartners = () => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
-        ScrollTrigger.defaults({ markers: { startColor: "white", endColor: "white" } });
+        // ScrollTrigger.defaults({ markers: { startColor: "white", endColor: "white" } });
 
         let formats = document.querySelectorAll(".single-section");
 
-        let scrollTween = gsap.to(formats, {
+        gsap.to(formats, {
             xPercent: -100 * (formats.length - 1),
             ease: "none", // <-- IMPORTANT!
             scrollTrigger: {

@@ -7,6 +7,8 @@ import FontFace from "../assets/fonts/font-face";
 import Layout from "./layout";
 import Homepage from "../pages/homepage";
 import Loading from "./loading";
+import AboutUs from "../pages/about-us";
+import ServicesPage from "../pages/services";
 
 // Theme is the root React component of our theme. The one we will export
 // in roots.
@@ -35,6 +37,8 @@ const Theme = ({ state }) => {
           <Switch>
             <Loading when={data.isFetching} />
             <Homepage when={data.isHome} />
+            <AboutUs when={data.route === "/about-us/"} />
+            <ServicesPage when={data.route === "/about-2/"} />
           </Switch>
         </Layout>
         {/* <Box

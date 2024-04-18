@@ -9,7 +9,7 @@ import gsap from 'gsap'
 export const menuItems = [
     { name: "Home", route: '/' },
     { name: "About", route: '/about/' },
-    { name: "Services", route: '/services/' },
+    { name: "Services", route: '/about-2/' },
     { name: "Customer Portal", route: '/customer-portal/' },
     { name: "Knowledge Center", route: '/knowledge-center/' },
 ]
@@ -78,7 +78,7 @@ const Header = ({ state }) => {
             window.removeEventListener("scroll", handleScroll);
             ctx.revert();
         };
-    }, [ctx]);
+    }, []);
     return (
         <>
             <Box ref={menuRef} as='header' padding={"32px"} marginBottom={"-140px"} display={{ base: "none", md: "block" }} overflow={'hidden'}>
