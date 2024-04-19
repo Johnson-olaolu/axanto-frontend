@@ -11,7 +11,7 @@ export const menuItems = [
     { name: "About", route: '/about/' },
     { name: "Services", route: '/about-2/' },
     { name: "Customer Portal", route: '/customer-portal/' },
-    { name: "Knowledge Center", route: '/knowledge-center/' },
+    { name: "Knowledge Center", route: '/axanto-blogs/' },
 ]
 
 const Header = ({ state }) => {
@@ -93,9 +93,13 @@ const Header = ({ state }) => {
                             ))}
                         </Flex>
                     </Box>
-                    <Box as='a' p={5} href='#' bg={'#6B97FF'} color={"black"} fontSize={24} fontWeight={'bold'} rounded={10} fontFamily={'Space Grotesk'} letterSpacing={"-2px"}>
-                        Support channel
-                    </Box>
+
+                    <Link link="/contact/">
+                        <Box p={5} bg={'#6B97FF'} color={"black"} fontSize={24} fontWeight={'bold'} rounded={10} fontFamily={'Space Grotesk'} letterSpacing={"-2px"}>
+                            Support channel
+                        </Box>
+                    </Link>
+
                 </Flex>
             </Box>
             <MobileMenu />

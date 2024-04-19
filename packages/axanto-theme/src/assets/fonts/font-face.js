@@ -226,6 +226,10 @@ const FontFace = () => (
         font-style: italic;
         font-display: swap;
       }
+      .text-outline {
+        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+        -webkit-text-stroke: 5px white;
+     }
     `}
   />
 );
