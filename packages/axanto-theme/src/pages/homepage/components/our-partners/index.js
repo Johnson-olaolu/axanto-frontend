@@ -64,12 +64,12 @@ const sections = splitArray(partners, 5)
 
 const OurPartners = () => {
     const containerRef = useRef(null)
+    gsap.registerPlugin(ScrollTrigger)
 
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
         // ScrollTrigger.defaults({ markers: { startColor: "white", endColor: "white" } });
 
-        let formats = document.querySelectorAll(".single-section");
+        let formats = containerRef.current.querySelectorAll(".single-section");
 
         gsap.to(formats, {
             xPercent: -100 * (formats.length - 1),
@@ -78,7 +78,7 @@ const OurPartners = () => {
                 trigger: containerRef.current,
                 pin: true,
                 scrub: 1,
-                start: "bottom bottom",
+                start: "center center",
                 //snap: directionalSnap(1 / (sections.length - 1)),
                 end: () => "+=" + containerRef.current.offsetWidth
             }
@@ -87,7 +87,7 @@ const OurPartners = () => {
 
 
     return (
-        <Box py={"80px"}>
+        <Box py={"80px"} width={"100vw"} overflow={"hidden"}>
             <Text
                 fontWeight={"extrabold"}
                 fontSize={48}

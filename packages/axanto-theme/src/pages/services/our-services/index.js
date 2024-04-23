@@ -7,9 +7,9 @@ import InfrastructureServices from './components/InfrastructureServices'
 const OurServices2 = () => {
     const [activeService, setActiveService] = useState("cloud")
     return (
-        <Box overflow={"hidden"}>
-            <Flex maxW={"1280px"} marginX={"auto"} alignItems={"start"}>
-                <Box py={"92px"} w={"328px"} borderRight={"1px solid rgba(0,0,0, 0.1)"} flexShrink={0}
+        <Box overflow={"hidden"} px={"16px"}>
+            <Flex maxW={"1280px"} marginX={"auto"} alignItems={"start"} direction={{ base: "column", md: "row" }}>
+                <Box py={"92px"} w={"328px"} borderRight={{ md: "1px solid rgba(0,0,0, 0.1)" }} flexShrink={0}
                 // {/* shadow={"0px 0px 4px 0px rgba(0,0,0,0.06)" } */}
                 >
                     <Text color={"#2865C8"} fontFamily={"Nexa"} fontSize={"28px"} fontWeight={"extrabold"}>Our services</Text>
@@ -58,7 +58,7 @@ const OurServices2 = () => {
                         </Flex>
                     </Flex>
                 </Box>
-                <Box flexGrow={1} minH={"1024px"} p={"72px"} pt={"152px"}>
+                <Box flexGrow={1} minH={"1024px"} p={{ base: "0", md: "72px" }} pt={{ base: "20px", md: "152px" }}>
                     {activeService === "cloud" ? <CloudServices /> : activeService == "security" ? <SecurityServices /> : <InfrastructureServices />}
                 </Box>
             </Flex>

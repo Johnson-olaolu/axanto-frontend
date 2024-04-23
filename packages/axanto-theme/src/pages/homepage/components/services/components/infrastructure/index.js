@@ -27,25 +27,25 @@ const InfrastructureService = () => {
     }, [])
     return (
         <Box maxW={"1280px"} marginX={"auto"}>
-            <Flex height={"446px"} alignItems={"center"} justifyContent={"space-between"}>
-                <Box ref={lottieRef}>
+            <Flex height={{ md: "446px", base: "auto" }} alignItems={"center"} justifyContent={"space-between"} direction={{ base: "column", md: "row" }}>
+                <Box ref={lottieRef} height={{ base: "360px", md: "740px" }} width={{ base: "330px", md: "660px" }}>
                     <LottieComponent options={{
                         animationData: InfrastructureLottie,
                         loop: true
                     }}
-                        height={740}
-                        width={740}
+                    // height={740}
+                    // width={740}
                     // isStopped={this.state.isStopped}
                     // isPaused={this.state.isPaused} 
 
                     />
                 </Box>
 
-                <Flex ref={textRef} direction={"column"} gap={"20px"} textAlign={"right"} maxW={"548px"}>
+                <Flex ref={textRef} direction={"column"} gap={"20px"} textAlign={{ md: "right", base: "center" }} maxW={"548px"}>
                     <Text fontSize={36} fontWeight={"black"} color={"#103166"} letterSpacing={"-5%"} fontFamily={"Satoshi"}>Infrastructure Services</Text>
-                    <Text fontSize={36} fontWeight={"bold"} color={"black"} letterSpacing={"-5%"} fontFamily={"Nexa"}>Building the Foundation with Reliable Infrastructure Service.</Text>
+                    <Text fontSize={{ sm: 20, md: 36 }} fontWeight={"bold"} color={"black"} letterSpacing={"-5%"} fontFamily={"Nexa"}>Building the Foundation with Reliable Infrastructure Service.</Text>
                     <Link link="#">
-                        <Box display={"inline-block"} paddingX={"28px"} paddingY={"24px"} bg={"#6B97FF"} color={"#030F22"} rounded={"14px"} textAlign={"center"} fontFamily={"Space Grotesk"} fontSize={"28px"} letterSpacing={"-2px"} fontWeight={"bold"}>Request for our Services</Box>
+                        <Box display={"inline-block"} paddingX={"28px"} paddingY={"24px"} bg={"#6B97FF"} color={"#030F22"} rounded={"14px"} textAlign={"center"} fontFamily={"Space Grotesk"} fontSize={{ base: "16px", md: "28px" }} letterSpacing={""} fontWeight={"bold"}>Request for our Services</Box>
                     </Link>
                 </Flex>
 

@@ -33,9 +33,9 @@ const JumbotronImage = () => {
 
     return (
         <Box position={'relative'}>
-            <Image ref={heroHeaderRef} src={HeroHeader} height={{ base: '200px', 'md': '820px' }} pb={"72px"} />
-            <Image ref={ellipse1Ref} src={Ellipse1} position={"absolute"} height={{ base: '', md: '160px' }} left={'314px'} top={'56px'} />
-            <Image ref={ellipse2Ref} src={Ellipse2} position={"absolute"} height={{ base: '', md: '160px' }} left={'28px'} bottom={'148px'} />
+            <Image ref={heroHeaderRef} src={HeroHeader} height={{ base: 'auto', 'md': '820px' }} width={{ base: "100%", md: "auto" }} pb={"72px"} />
+            <Image ref={ellipse1Ref} src={Ellipse1} position={"absolute"} height={{ base: '120px', md: '160px' }} left={'314px'} top={'56px'} />
+            <Image ref={ellipse2Ref} src={Ellipse2} position={"absolute"} height={{ base: '120px', md: '160px' }} left={'28px'} bottom={'148px'} />
         </Box>
     )
 }

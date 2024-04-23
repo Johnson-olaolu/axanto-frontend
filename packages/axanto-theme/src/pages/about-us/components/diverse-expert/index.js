@@ -36,26 +36,28 @@ const DiverseExpert = () => {
         );
     }, []);
     return (
-        <Box ref={wrapperRef} pt={"80px"} mb={"142px"} overflow={"hidden"}>
+        <Box px={"16px"} ref={wrapperRef} pt={"80px"} mb={"142px"} overflow={"hidden"}>
             <Flex
                 justifyContent={"space-between"}
                 alignItems={"center"}
                 maxW={"1280px"}
                 marginX={"auto"}
+                direction={{ base: "column-reverse", md: "row" }}
+                gap={{ base: "40px", md: 0 }}
             >
-                <Flex ref={section1Ref} flexDir={"column"} gap={"40px"} maxW={"600px"}>
+                <Flex ref={section1Ref} flexDir={"column"} gap={{ base: "20px", md: "40px" }} maxW={"600px"} >
                     <Text
-                        fontSize={80}
+                        fontSize={{ base: 48, md: 80 }}
                         fontWeight={"extrabold"}
                         fontFamily={"Nexa"}
                         color={"#103166"}
-                        letterSpacing={"-5px"}
+                        letterSpacing={{ md: "-5px" }}
                         lineHeight={1.2}
                     >
                         Diverse expertise across industries.
                     </Text>
                     <Text
-                        fontSize={24}
+                        fontSize={{ md: 24 }}
                         fontWeight={"medium"}
                         fontFamily={"Satoshi"}
                         color={"#030F22"}
@@ -76,7 +78,7 @@ const DiverseExpert = () => {
                             px={"32px"}
                             bg={"#2865C8"}
                             color={"#F8FBFF"}
-                            fontSize={"24px"}
+                            fontSize={{ md: "24px" }}
                             rounded={"12px"}
                             fontWeight={"bold"}
                             fontFamily={"Satoshi"}
@@ -86,7 +88,7 @@ const DiverseExpert = () => {
                         </Box>
                     </Link>
                 </Flex>
-                <Image ref={section2Ref} src={DiverseImage} height={"574px"} />
+                <Image ref={section2Ref} src={DiverseImage} height={"auto"} width={"574px"} maxW={"100%"} />
             </Flex>
         </Box>
     );

@@ -33,8 +33,8 @@ const ServiceProblems = () => {
         }, { scale: 1, duration: 1.5 }, 0)
     }, [])
     return (
-        <Box overflow={"hidden"} ref={wrapperRef} py={"100px"}>
-            <Grid maxW={"1280px"} mx={"auto"} gridTemplateColumns={"repeat(3, 1fr)"} gap={"48px"}>
+        <Box overflow={"hidden"} ref={wrapperRef} py={"100px"} px={"16px"}>
+            <Grid maxW={"1280px"} mx={"auto"} gridTemplateColumns={{ md: "repeat(3, 1fr)" }} gap={"48px"}>
                 <Flex ref={item1Ref} height={"420px"} direction={"column"} p={"40px"} border={"1px solid black"} rounded={"24px"} alignItems={"center"} textAlign={"center"} >
                     <Image src={MiningImage} height={"100px"} width={"100px"} mb={"48px"} />
                     <Text lineHeight={1.2} color={"black"} fontFamily={"Satoshi"} fontSize={"32px"} fontWeight={"black"} letterSpacing={"-2px"}>Problem Identification</Text>

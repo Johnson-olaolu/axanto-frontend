@@ -1,14 +1,14 @@
-import { Box } from '@chakra-ui/react'
+import { Stack } from '@chakra-ui/react'
 import React from 'react'
 import OurComprehension from './components/OurComprehension'
 import WeEmpower from './components/WeEmpower'
 
 const Values = () => {
     return (
-        <Box bg={"white"} mb={"200px"}>
+        <Stack gap={"40px"} bg={"white"} mb={{ base: "80px", md: "200px" }} >
             <OurComprehension />
             <WeEmpower />
-        </Box>
+        </Stack>
     )
 }
 

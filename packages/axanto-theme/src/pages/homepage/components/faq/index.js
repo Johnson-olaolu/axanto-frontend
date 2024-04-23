@@ -19,13 +19,13 @@ export const faqs = [
 
 const Faqs = () => {
     return (
-        <Box py={"80px"}>
+        <Box py={"80px"} px={"16px"}>
             <Text
                 fontWeight={"extrabold"}
-                fontSize={48}
+                fontSize={{ base: "48px" }}
                 fontFamily={"Nexa"}
                 textAlign={"center"}
-                mb={"120px"}
+                mb={{ base: "40px", md: "120px" }}
             >
                 Frequently Asked Questions
             </Text>

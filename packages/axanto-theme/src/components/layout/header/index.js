@@ -8,7 +8,7 @@ import gsap from 'gsap'
 
 export const menuItems = [
     { name: "Home", route: '/' },
-    { name: "About", route: '/about/' },
+    { name: "About", route: '/about-us/' },
     { name: "Services", route: '/about-2/' },
     { name: "Customer Portal", route: '/customer-portal/' },
     { name: "Knowledge Center", route: '/axanto-blogs/' },

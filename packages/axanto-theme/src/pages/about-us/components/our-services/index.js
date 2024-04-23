@@ -6,25 +6,25 @@ import OurServices2 from '../../../../assets/images/our-services2.png'
 import OurServices3 from '../../../../assets/images/our-services3.png'
 const OurServices = () => {
     return (
-        <Box>
+        <Box px={"16px"}>
             <Box textAlign={"center"}>
                 <Text
                     fontWeight={"extrabold"}
-                    fontSize={80}
+                    fontSize={{ base: 48, md: 80 }}
                     fontFamily={"Nexa"}
                     textAlign={"center"}
                     lineHeight={1.1}
-                    letterSpacing={"-5px"}
+                    letterSpacing={{ md: "-5px" }}
                     color={"#103166"}
                 >
                     Our Services
                 </Text>
                 <Text
-                    fontSize={28}
+                    fontSize={{ base: 20, md: 28 }}
                     fontWeight={"medium"}
                     fontFamily={"Satoshi"}
                     color={"black"}
-                    letterSpacing={"-2px"}
+                    letterSpacing={{ md: "-2px" }}
                     maxW={"1120px"}
                     mx={"auto"}
                     textAlign={"center"}
@@ -45,7 +45,7 @@ const OurServices = () => {
                         px={"32px"}
                         bg={"#2865C8"}
                         color={"#F8FBFF"}
-                        fontSize={"24px"}
+                        fontSize={{ md: "24px" }}
                         rounded={"12px"}
                         fontWeight={"bold"}
                         fontFamily={"Satoshi"}
@@ -55,7 +55,7 @@ const OurServices = () => {
                     </Box>
                 </Link>
             </Box>
-            <Grid mt={"100px"} maxW={"1280px"} mx={"auto"} templateColumns='repeat(3, 1fr)' gap={"24px"}>
+            <Grid mt={"100px"} maxW={"1280px"} mx={"auto"} templateColumns={{ md: 'repeat(3, 1fr)' }} gap={"24px"}>
                 <Box rounded={"28px"} border={"0.5px solid black"}>
                     <Image src={OurServices1} height={"204px"} width={"full"} rounded={"28px"} />
                     <Box py={"40px"} px={"28px"}>

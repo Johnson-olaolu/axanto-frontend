@@ -37,10 +37,10 @@ const JumbotronBadge = () => {
     }, [])
     return (
         <Box ref={divRef} position={"relative"}>
-            <Flex bg={"white"} height={"96px"} width={"96px"} position={"absolute"} left={"50%"} top={"50%"} translateX={"-50%"} translateY={"-50%"} transform={"auto"} rounded={"full"} alignItems={"center"} justifyContent={"center"}>
-                <Image src={JumboCartoon} height={"48px"} width={"36px"} />
+            <Flex bg={"white"} height={{ base: "48px", md: "96px" }} width={{ base: "48px", md: "96px" }} position={"absolute"} left={"50%"} top={"50%"} translateX={"-50%"} translateY={"-50%"} transform={"auto"} rounded={"full"} alignItems={"center"} justifyContent={"center"}>
+                <Image src={JumboCartoon} height={{ base: "24px", md: "48px" }} width={{ base: "18px", md: "36px" }} />
             </Flex>
-            <Image ref={textRef} src={BadgeText} />
+            <Image height={{ base: "76px", md: "152px" }} width={{ base: "76px", md: "152px" }} ref={textRef} src={BadgeText} />
         </Box>
     )
 }

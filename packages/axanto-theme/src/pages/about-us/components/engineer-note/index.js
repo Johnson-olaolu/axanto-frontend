@@ -37,14 +37,14 @@ const EngineerNote = () => {
     }, []);
 
     return (
-        <Box>
+        <Box px={"16px"}>
             <Text
                 fontWeight={"extrabold"}
-                fontSize={80}
+                fontSize={{ base: 48, md: 80 }}
                 fontFamily={"Nexa"}
                 textAlign={"center"}
                 lineHeight={1.1}
-                letterSpacing={"-5px"}
+                letterSpacing={{ md: "-5px" }}
                 color={"#103166"}
             >
                 A note from our Chief <br /> Sustainability Officer
@@ -56,32 +56,34 @@ const EngineerNote = () => {
                     alignItems={"center"}
                     maxW={"1280px"}
                     marginX={"auto"}
+                    direction={{ base: "column", md: "row" }}
+                    gap={{ base: "20px", md: 0 }}
                 >
-                    <Image ref={section1Ref} src={DiverseImage} height={"600px"} />
+                    <Image ref={section1Ref} src={DiverseImage} height={{ base: "auto", md: "600px" }} width={{ base: "100%", md: "auto" }} />
                     <Flex
                         ref={section2Ref}
                         flexDir={"column"}
-                        gap={"40px"}
+                        gap={{ base: "16px", md: "40px" }}
                         maxW={"600px"}
                     >
-                        <Box mb={"40px"}>
+                        <Box mb={{ base: "16px", md: "40px" }}>
                             <Text
-                                fontSize={28}
+                                fontSize={{ sm: 20, md: 28 }}
                                 fontWeight={"medium"}
                                 fontFamily={"Satoshi"}
                                 color={"black"}
-                                letterSpacing={"-2px"}
+                                letterSpacing={{ md: "-2px" }}
                             >
                                 Axanto Group Inc. is committed to corporate social
                                 responsibility, environmental sustainability, and a responsible
                                 supply chain, all aimed at protecting our planet and
                                 contributing to societal well-being with focus on:
                             </Text>
-                            <Box mt={"20px"} fontSize={28}
+                            <Box mt={"20px"} fontSize={{ sm: 20, md: 28 }}
                                 fontWeight={"medium"}
                                 fontFamily={"Satoshi"}
                                 color={"black"}
-                                letterSpacing={"-2px"} paddingLeft={"20px"} as="ul" listStyleType={"disc"}>
+                                letterSpacing={{ md: "-2px" }} paddingLeft={"20px"} as="ul" listStyleType={"disc"}>
                                 <Box as="li">Recycling</Box>
                                 <Box as="li">Pollution Prevention </Box>
                                 <Box as="li"> Supply Chain Sustainability </Box>
@@ -97,7 +99,7 @@ const EngineerNote = () => {
                                 px={"32px"}
                                 bg={"#2865C8"}
                                 color={"#F8FBFF"}
-                                fontSize={"24px"}
+                                fontSize={{ md: "24px" }}
                                 rounded={"12px"}
                                 fontWeight={"bold"}
                                 fontFamily={"Satoshi"}

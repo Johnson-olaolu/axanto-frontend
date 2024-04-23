@@ -4,13 +4,13 @@ import BlogCard from '../../../../components/cards/blog-card'
 
 const KnowledgePortal = () => {
     return (
-        <Box py={"80px"}>
+        <Box py={"80px"} mx={"16px"}>
             <Text
                 fontWeight={"extrabold"}
                 fontSize={48}
                 fontFamily={"Nexa"}
                 textAlign={"center"}
-                mb={"120px"}
+                mb={{ base: "40px", md: "120px" }}
             >
                 Knowledge Portal
             </Text>

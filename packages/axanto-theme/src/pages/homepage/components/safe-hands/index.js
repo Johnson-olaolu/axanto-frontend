@@ -31,11 +31,11 @@ const SafeHands = () => {
         }, 0)
     }, [])
     return (
-        <Box bgImage={`url(${SafeHandsBg})`} px={0} bgSize={"cover"} bgPos={"center"} overflow={"hidden"}>
-            <Flex maxW={"1280px"} justifyContent={"space-between"} py={"140px"} mx={"auto"}>
+        <Box bgImage={`url(${SafeHandsBg})`} px={"16px"} bgSize={"cover"} bgPos={"center"} overflow={"hidden"}>
+            <Flex maxW={"1280px"} justifyContent={"space-between"} py={{ base: "80px", md: "140px" }} mx={"auto"} direction={{ base: "column", md: "row" }}>
                 <Box maxW={"600px"} flexShrink={0} zIndex={2}>
-                    <Text fontFamily={"Nexa"} fontWeight={"extrabold"} fontSize={"70px"} color={"white"} mb={"40px"} letterSpacing={"-5%"} lineHeight={1.1}>Your Data is in Safe Hands</Text>
-                    <Text fontFamily={"Satoshi"} fontWeight={"medium"} fontSize={"24px"} color={"white"} letterSpacing={"-5%"} lineHeight={1.1}>
+                    <Text fontFamily={"Nexa"} fontWeight={"extrabold"} fontSize={{ base: "48px", md: "70px" }} color={"white"} mb={"40px"} letterSpacing={"-5%"} lineHeight={1.1}>Your Data is in Safe Hands</Text>
+                    <Text fontFamily={"Satoshi"} fontWeight={"medium"} fontSize={{ md: "24px" }} color={"white"} letterSpacing={"-5%"} lineHeight={1.5}>
                         Our proven track record in providing top-tier cyber security
                         solutions and cutting-edge cloud infrastructure is a testament to
                         our expertise and dedication. With a team of seasoned professionals
@@ -46,9 +46,9 @@ const SafeHands = () => {
                         Your trust is our driving force.
                     </Text>
                 </Box>
-                <Box flexGrow={1} position={"relative"}>
-                    <Image ref={lockImage1Ref} height={"400px"} src={LockImage1} position={"absolute"} left={0} top={20} />
-                    <Image ref={lockImage2Ref} height={"400px"} src={LockImage2} position={"absolute"} right={0} top={20} />
+                <Box flexGrow={1} position={"relative"} height={{ base: "300px", md: "auto" }}>
+                    <Image ref={lockImage1Ref} height={{ base: "auto", md: "400px" }} width={{ base: "50%", md: "auto" }} src={LockImage1} position={"absolute"} left={0} top={20} />
+                    <Image ref={lockImage2Ref} height={{ base: "auto", md: "400px" }} width={{ base: "50%", md: "auto" }} src={LockImage2} position={"absolute"} right={0} top={20} />
                 </Box>
             </Flex>
         </Box>

@@ -31,7 +31,7 @@ const multiSectorImagesData = [
 
 const MultiSectorImages = () => {
     return (
-        <Box overflow={"hidden"}>
+        <Box overflow={"hidden"} px={"16px"}>
             <Box maxW={"1280px"} mx={"auto"}>
                 <Flex w={"100vw"} gap={"32px"} overflowX={"auto"} paddingRight={"200px"}>
                     {multiSectorImagesData.map((data, idx) => (

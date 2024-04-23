@@ -40,8 +40,9 @@ const Jumbotron = () => {
                 backgroundImage={`url(${JumbotronBg})`}
                 bgSize={"cover"}
                 py={"100px"}
+                px={"16px"}
             >
-                <Box height={"140px"}></Box>
+                <Box height={{ md: "140px" }}></Box>
                 <Box
                     maxW={"1280px"}
                     marginX={"auto"}
@@ -53,11 +54,11 @@ const Jumbotron = () => {
                         as={"h2"}
                         lineHeight={1.2}
                         textAlign={"center"}
-                        fontSize={"80px"}
+                        fontSize={{ base: 48, md: "80px" }}
                         fontWeight={"extrabold"}
                         fontFamily={"Nexa"}
                         color={"#C1C7F9"}
-                        letterSpacing={"-5px"}
+                        letterSpacing={{ md: "-5px" }}
                     >
                         Cybersecurity and <br /> Infrastructure Blogs{" "}
                     </Text>
@@ -65,11 +66,11 @@ const Jumbotron = () => {
                         mt={"32px"}
                         as={"h4"}
                         textAlign={"center"}
-                        fontSize={"32px"}
+                        fontSize={{ base: "24px", md: "32px" }}
                         fontWeight={"medium"}
                         fontFamily={"Satoshi"}
                         color={"white"}
-                        letterSpacing={"-1px"}
+                        letterSpacing={{ md: "-1px" }}
                     >
                         Explore the latest insights, strategies, and cutting-edge technologies to fortify your cyber security infrastructure.
                     </Text>
@@ -79,7 +80,6 @@ const Jumbotron = () => {
                         {Array.from(Array(count).keys()).map((id) => (
                             <Text px={"5px"} flexShrink={0} key={id} ref={textRef} className="text-outline" fontSize={"80px"} fontWeight={"black"} color={"transparent"} fontFamily={"Nexa"} letterSpacing={"-2px"} >Knowledge portal.</Text>
                         ))}
-
                     </Flex>
                 </Box>
             </Box>

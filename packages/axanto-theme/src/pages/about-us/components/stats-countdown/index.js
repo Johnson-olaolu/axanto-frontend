@@ -15,25 +15,28 @@ const StatsCountDown = () => {
             snap: { textContent: 1 },
             // stagger: 1,
             // onUpdate: textContent.replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-            scrollTrigger: wrapperRef.current
+            scrollTrigger: {
+                trigger: wrapperRef.current,
+                start: "center center",
+            }
         });
     }, [])
     return (
-        <Box ref={wrapperRef} py={"100px"} mt={"80px"}>
-            <Flex maxW={"1280px"} marginX={"auto"} justifyContent={"space-between"}>
-                <Flex direction={"column"} gap={"36px"} align={"center"}>
-                    <Text lineHeight={1} fontFamily={"Nexa"} fontSize={"36px"} color={"black"} fontWeight={"extrabold"} letterSpacing={"-2px"}>YEARS OF EXPERIENCE</Text>
-                    <Text lineHeight={1} fontFamily={"Satoshi"} fontSize={"80px"} color={"#103166"} fontWeight={"black"} letterSpacing={"-5px"}> <span className='data-counter'>20</span>+</Text>
+        <Box ref={wrapperRef} py={{ base: "40px", md: "100px" }} mt={{ base: "20px", md: "80px" }} px={"16px"}>
+            <Flex maxW={"1280px"} marginX={"auto"} justifyContent={"space-between"} direction={{ base: "column", md: "row" }} textAlign={"center"} gap={{ base: "40px", md: 0 }}>
+                <Flex direction={"column"} gap={{ base: "16px", md: "36px" }} align={"center"}>
+                    <Text lineHeight={1} fontFamily={"Nexa"} fontSize={{ base: "24px", md: "36px" }} color={"black"} fontWeight={"extrabold"} letterSpacing={{ md: "-2px" }}>YEARS OF EXPERIENCE</Text>
+                    <Text lineHeight={1} fontFamily={"Satoshi"} fontSize={{ md: "80px", base: "48px" }} color={"#103166"} fontWeight={"black"} letterSpacing={{ md: "-5px" }}> <span className='data-counter'>20</span>+</Text>
                 </Flex>
 
-                <Flex direction={"column"} gap={"36px"} align={"center"}>
-                    <Text lineHeight={1} fontFamily={"Nexa"} fontSize={"36px"} color={"black"} fontWeight={"extrabold"} letterSpacing={"-2px"}>CERTIFIED SPECIALIZATIONS</Text>
-                    <Text lineHeight={1} fontFamily={"Satoshi"} fontSize={"80px"} color={"#103166"} fontWeight={"black"} letterSpacing={"-5px"}><span className='data-counter'>10</span> +</Text>
+                <Flex direction={"column"} gap={{ base: "16px", md: "36px" }} align={"center"}>
+                    <Text lineHeight={1} fontFamily={"Nexa"} fontSize={{ base: "24px", md: "36px" }} color={"black"} fontWeight={"extrabold"} letterSpacing={{ md: "-2px" }}>CERTIFIED SPECIALIZATIONS</Text>
+                    <Text lineHeight={1} fontFamily={"Satoshi"} fontSize={{ md: "80px", base: "48px" }} color={"#103166"} fontWeight={"black"} letterSpacing={{ md: "-5px" }}><span className='data-counter'>10</span> +</Text>
                 </Flex>
 
-                <Flex direction={"column"} gap={"36px"} align={"center"}>
-                    <Text lineHeight={1} fontFamily={"Nexa"} fontSize={"36px"} color={"black"} fontWeight={"extrabold"} letterSpacing={"-2px"}>SATISFACTION RATE</Text>
-                    <Text lineHeight={1} fontFamily={"Satoshi"} fontSize={"80px"} color={"#103166"} fontWeight={"black"} letterSpacing={"-5px"}><span className='data-counter'>100</span>%</Text>
+                <Flex direction={"column"} gap={{ base: "16px", md: "36px" }} align={"center"}>
+                    <Text lineHeight={1} fontFamily={"Nexa"} fontSize={{ base: "24px", md: "36px" }} color={"black"} fontWeight={"extrabold"} letterSpacing={{ md: "-2px" }}>SATISFACTION RATE</Text>
+                    <Text lineHeight={1} fontFamily={"Satoshi"} fontSize={{ md: "80px", base: "48px" }} color={"#103166"} fontWeight={"black"} letterSpacing={{ md: "-5px" }}><span className='data-counter'>100</span>%</Text>
                 </Flex>
             </Flex>
         </Box>

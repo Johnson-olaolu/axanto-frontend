@@ -7,10 +7,10 @@ import JumbotronBadge from './components/JumbotronBadge'
 
 const Jumbotron = () => {
     return (
-        <Box height={"1000px"} backgroundImage={`url(${JumbotronBg})`} bgSize={"cover"}>
-            <Box height={"140px"}></Box>
+        <Box height={"1000px"} backgroundImage={`url(${JumbotronBg})`} bgSize={"cover"} px={"16px"}>
+            <Box height={{ base: "0px", md: "140px" }}></Box>
             <Box maxW={"1280px"} marginX={"auto"} position={"relative"}>
-                <Flex justifyContent={"space-between"}>
+                <Flex justifyContent={"space-between"} flexDirection={{ base: "column", md: "row" }}>
                     <JumbotronText />
                     <JumbotronImage />
                 </Flex>

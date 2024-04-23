@@ -19,7 +19,7 @@ const ContactForm = () => {
         },
     });
     return (
-        <Box py={"160px"}>
+        <Box px={"16px"} py={"160px"}>
             <Box>
                 <Text></Text>
                 <Text></Text>
@@ -32,20 +32,21 @@ const ContactForm = () => {
                     bg={"white"}
                     p={"12px"}
                 >
-                    <Flex gap={"54px"} alignItems={"center"}>
+                    <Flex direction={{ base: "column", md: "row" }} gap={"54px"} alignItems={"center"}>
                         <Box
                             flexShrink={0}
                             backgroundImage={`url(${ContactFormBg})`}
                             bgSize={"contain"}
-                            width={"540px"}
-                            height={"712px"}
+                            width={{ base: "100%", md: "540px" }}
+                            height={{ base: "540px" }}
                             rounded={"12px"}
                         ></Box>
-                        <Box pr={"42px"} as="form" flexGrow={1}>
+                        <Box pr={{ md: "42px" }} as="form" flexGrow={1}>
                             <Grid
-                                gridTemplateColumns={"repeat(2, 1fr)"}
+                                gridTemplateColumns={{ md: "repeat(2, 1fr)" }}
                                 columnGap={"40px"}
                                 rowGap={"48px"}
+                                px={{ base: "20px", md: 0 }}
                             >
                                 <Box>
                                     <Text
@@ -147,7 +148,7 @@ const ContactForm = () => {
                                         placeholder="Johnson"
                                     />
                                 </Box>
-                                <Box gridColumn={"1 / span 2"}>
+                                <Box gridColumn={{ md: "1 / span 2" }}>
                                     <Text
                                         fontWeight={"medium"}
                                         fontSize={"18px"}
@@ -156,7 +157,7 @@ const ContactForm = () => {
                                     >
                                         Select Subject?
                                     </Text>
-                                    <Flex gap={"28px"} mt={"16px"}>
+                                    <Flex flexWrap={"wrap"} gap={"28px"} mt={"16px"}>
                                         {options.map((data, idx) => (
                                             <Flex
                                                 key={idx}
@@ -184,7 +185,7 @@ const ContactForm = () => {
                                         ))}
                                     </Flex>
                                 </Box>
-                                <Box gridColumn={"1 / span 2"}>
+                                <Box gridColumn={{ md: "1 / span 2" }}>
                                     <Text
                                         fontWeight={"medium"}
                                         fontSize={"18px"}
@@ -216,8 +217,8 @@ const ContactForm = () => {
                         </Box>
                     </Flex>
                 </Box>
-            </Box>
-        </Box>
+            </Box >
+        </Box >
     );
 };
 

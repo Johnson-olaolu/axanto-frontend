@@ -37,13 +37,15 @@ const MultiSectorExpertise = () => {
     );
   }, []);
   return (
-    <Box marginBottom={"256px"}>
-      <Box ref={wrapperRef} pt={"80px"} mb={"142px"} overflow={"hidden"}>
+    <Box marginBottom={{ base: "80px", md: "256px" }}>
+      <Box ref={wrapperRef} pt={"80px"} mb={{ base: "40px", md: "142px" }} overflow={"hidden"} px={"16px"}>
         <Flex
           justifyContent={"space-between"}
           alignItems={"center"}
           maxW={"1280px"}
           marginX={"auto"}
+          direction={{ base: "column", md: "row" }}
+          rowGap={"40px"}
         >
           <Flex
             ref={section1Ref}
@@ -52,17 +54,17 @@ const MultiSectorExpertise = () => {
             maxW={"600px"}
           >
             <Text
-              fontSize={80}
+              fontSize={{ base: 48, md: 80 }}
               fontWeight={"extrabold"}
               fontFamily={"Nexa"}
               color={"#103166"}
-              letterSpacing={"-5px"}
+              letterSpacing={{ md: "-5px" }}
               lineHeight={1.2}
             >
               Our Multisector Expertise
             </Text>
             <Text
-              fontSize={24}
+              fontSize={{ base: 24, md: 32 }}
               fontWeight={"medium"}
               fontFamily={"Satoshi"}
               color={"#030F22"}
@@ -90,7 +92,7 @@ const MultiSectorExpertise = () => {
               </Box>
             </Link> */}
           </Flex>
-          <Image ref={section2Ref} src={MultisectorImage} height={"574px"} />
+          <Image ref={section2Ref} src={MultisectorImage} height={{ base: "auto", md: "574px" }} width={{ base: "100%", md: "auto" }} />
         </Flex>
       </Box>
       <MultiSectorImages />

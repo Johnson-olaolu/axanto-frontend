@@ -5,17 +5,17 @@ import Link from '@frontity/components/link'
 
 const BlogItems = () => {
     return (
-        <Box my={"140px"}>
+        <Box my={"140px"} px={"16px"}>
             <Text
                 fontWeight={"extrabold"}
-                fontSize={48}
+                fontSize={{ base: 32, md: 48 }}
                 fontFamily={"Nexa"}
                 textAlign={"center"}
-                mb={"120px"}
+                mb={{ base: "80px", md: "120px" }}
             >
                 Knowledge Portal
             </Text>
-            <Grid gridTemplateColumns={"repeat(3, 1fr)"} direction={"row"} gap={"48px"} maxW={"1280px"} marginX={"auto"} >
+            <Grid gridTemplateColumns={{ md: "repeat(3, 1fr)" }} justifyItems={"center"} direction={"row"} gap={"48px"} maxW={"1280px"} marginX={"auto"} >
                 <BlogCard />
                 <BlogCard />
                 <BlogCard />
@@ -29,7 +29,7 @@ const BlogItems = () => {
             </Grid>
             <Flex mt={"48px"} justifyContent={"center"}>
                 <Link link="#">
-                    <Box display={"inline-block"} paddingX={"28px"} paddingY={"24px"} bg={"#6B97FF"} color={"white"} rounded={"14px"} textAlign={"center"} fontFamily={"Space Grotesk"} fontSize={"28px"} letterSpacing={"-2px"} fontWeight={"bold"}>Request for our Services</Box>
+                    <Box display={"inline-block"} paddingX={"32px"} paddingY={"24px"} bg={"#6B97FF"} color={"white"} rounded={"14px"} textAlign={"center"} fontFamily={"Space Grotesk"} fontSize={{ md: "28px" }} letterSpacing={{ md: "-2px" }} fontWeight={"bold"}>Request for our Services</Box>
                 </Link>
             </Flex>
         </Box>

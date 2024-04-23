@@ -20,7 +20,6 @@ const Services = () => {
                 setActiveService("cloud")
                 text = "cloud"
             }
-            console.log(text)
         }, 5000)
     }, [])
 
@@ -39,8 +38,8 @@ const Services = () => {
             backgroundSize: "100% auto",
             zIndex: -1
 
-        }} py={"128px"} position={"relative"} overflow={"hidden"} >
-            <Text textAlign={"center"} fontFamily={"Nexa"} fontWeight={"extrabold"} fontSize={"80px"} mb={"64px"}>Services</Text>
+        }} py={{ base: "80px", md: "128px" }} position={"relative"} overflow={"hidden"} px={{ base: "16px", md: "0px" }} >
+            <Text textAlign={"center"} fontFamily={"Nexa"} fontWeight={"extrabold"} fontSize={{ base: "48px", md: "80px" }} mb={"64px"}>Services</Text>
             <Box>
                 {activeService === "cloud" ? <CloudService /> : activeService === "infrastructure" ? <InfrastructureService /> : <SecurityService />}
             </Box>
